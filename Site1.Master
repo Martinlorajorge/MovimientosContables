@@ -10,7 +10,7 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <a href="WebForm1">Punto 1</a> - <a href="WebForm2">Punto 2</a> - <a href="WebForm3">Punto 3</a> - <a href="WebForm4">Punto 4</a>
+    <a href="WebForm1.aspx">Punto 1</a> - <a href="WebForm2.aspx">Punto 2</a> - <a href="WebForm3.aspx">Punto 3</a> - <a href="WebForm4.aspx">Punto 4</a>
     <form id="form1" runat="server">
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
