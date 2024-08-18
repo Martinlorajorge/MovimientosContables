@@ -9,17 +9,29 @@
     </p>
     <p>
         Monto:&nbsp;
-        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+        <asp:TextBox ID="TextBox1" runat="server" Width="119px"></asp:TextBox>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="TextBox1" Display="None" ErrorMessage="El campo MONTO  se encuentra vacio" ForeColor="Red"></asp:RequiredFieldValidator>
+&nbsp;&nbsp;&nbsp;
+        <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="TextBox1" Display="None" ErrorMessage="El monto debe ser un número con hasta 8 dígitos enteros y hasta 2 decimales, utilizando una coma (,) como separador decimal." ForeColor="Red" ValidationExpression="^\d{1,8}(?:,\d{1,2})?$"></asp:RegularExpressionValidator>
     </p>
     <p>
-        Tipo:
-        <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+        Tipo:&nbsp;&nbsp;&nbsp;
+        <asp:TextBox ID="TextBox2" runat="server" style="margin-left: 5px" Width="119px"></asp:TextBox>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="TextBox2" Display="None" ErrorMessage="El campo TIPO se encuentra vacio" ForeColor="Red"></asp:RequiredFieldValidator>
+&nbsp;&nbsp;&nbsp;
+        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="TextBox2" Display="None" ErrorMessage="Solo se permite D (debe) o H (haber)." ForeColor="Red" ValidationExpression="^[DH]$"></asp:RegularExpressionValidator>
     </p>
     <p>
-        Fecha:
+        Fecha:&nbsp;&nbsp;
         <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="TextBox3" Display="None" ErrorMessage="El campo FECHA se encuentra vacio" ForeColor="#FF3300"></asp:RequiredFieldValidator>
+&nbsp;&nbsp;&nbsp;
+        <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="TextBox3" Display="None" ErrorMessage="El formato para la fecha es dd-MM-yyyy (dia-mes-año)." ForeColor="Red" ValidationExpression="^\d{2}-\d{2}-\d{4}$"></asp:RegularExpressionValidator>
     </p>
     
+    <p>
+    </p>
+    <asp:ValidationSummary ID="ValidationSummary1" runat="server" ForeColor="Red" />
     <p>
         <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Agregar" />
         <asp:Label ID="Label1" runat="server"></asp:Label>
@@ -46,6 +58,7 @@
             <SortedDescendingCellStyle BackColor="#D8D8F0" />
             <SortedDescendingHeaderStyle BackColor="#3E3277" />
         </asp:GridView>
+    &nbsp;&nbsp;&nbsp;
     </p>
     <p>
         Ingrese Codigo de Movimiento Contable

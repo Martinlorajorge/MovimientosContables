@@ -37,6 +37,7 @@
     <br />
     Ingrese la Descripcion de la Cuenta:&nbsp;
     <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="TextBox1" ErrorMessage="RequiredFieldValidator" ForeColor="Red">El campo esta Vacio agrega una Cuenta</asp:RequiredFieldValidator>
     <br />
     <br />
     <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Agregar" />
